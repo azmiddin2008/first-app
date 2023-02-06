@@ -1,0 +1,123 @@
+#:kivy 1.7
+WidgetsActionExample:
+    
+
+
+<WidgetsActionExample>:
+    cols:3
+    BoxLayout:
+        orientation:"vertical"
+
+        ToggleButton:
+            text: root.toggle_text
+            font_size: dp(50)
+            size_hint: None, 1
+            width: dp(400)
+            height:dp(10)
+
+            on_state:root.button_toggle_counter(self)
+        
+        Button:
+            text: "Click"
+            color:1,1,0
+            size_hint:None, None
+            width: dp(400)
+            height:dp(500)
+            on_press: root.func()
+            
+            disabled: not root.counter_enable
+            
+
+    BoxLayout:
+        orientation:  'vertical'  
+        Label:
+            text:root.random_text
+            color:1, .5,1
+            font_size:dp(20)
+            width: dp(50)
+            height:dp(50)
+            font_name: "font.ttf"
+           
+
+        Button:
+            text: root.text
+            size_hint: 1, None
+            height: dp(200)
+            font_size: dp(26)
+
+
+    # StackLayoutturlari:
+    #     size_hint:1,None
+    #     heigt:self.minimum_height
+<AnchorLayoutTurlari>:
+    anchor_x: "left"
+    anchor_y: "top"
+    BoxLayout:
+        size_hint: .4, .4
+        Button:
+            text:".col1"
+            size_hint: .3, .5
+    AnchorLayout:
+        anchor_x: "right"
+        anchor_y: "top"
+        BoxLayout:
+            size_hint: .4, .4
+            Button:
+                text:".col4"
+                size_hint: .3, .5
+
+    AnchorLayout:
+        anchor_x: "right"
+        anchor_y: "bottom"
+        BoxLayout:
+            size_hint: .4, .4
+            Button:
+                text:".col6"
+                size_hint: .3, .5
+    AnchorLayout:
+        anchor_x: "left"
+        anchor_y: "bottom"
+        BoxLayout:
+            size_hint: .3, .4
+            Button:
+                text:".col3"
+                size_hint: .3, .5
+    AnchorLayout:
+        anchor_x: "right"
+        anchor_y: "center"
+        BoxLayout:
+            size_hint: .3, .4
+            Button:
+                text:".col5"
+                size_hint: .3, .5
+
+    AnchorLayout:
+        anchor_x: "center"
+        anchor_y: "center"
+        BoxLayout:
+            size_hint: .3, .4
+            Button:
+                text:".col2"
+                size_hint: .5, .5
+    
+         
+# <Gridlayoutturlari>:
+    # cols:3 =ustun
+    # rows:2=qator
+
+    # Button:
+    #     text:"A"
+    # Button:
+    #     text:"b"
+    # Button:
+    #     text:"c"   
+    # Button:
+    #     text:"d"
+    # Button:
+    #     text:"e"
+    # Button:
+    #     text:"f"    
+# <Widjetturlari>
+    # Button:
+    #     text:"A"
+    #     size:300,400
